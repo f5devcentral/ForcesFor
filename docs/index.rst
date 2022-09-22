@@ -73,7 +73,7 @@ Baseline
 
 **Baseline** policy part defines basic parameters - name, description and a template used for this policy
 
-.. image:: images/baseline.png
+.. image:: ../sources/images/baseline.png
 
 .. note:: In the future it will be possible to reference an externally hosted policy
 
@@ -82,14 +82,14 @@ Adjustments
 
 **Adjustments** part defines overrides and/or additions to the baseline policy. This include any blocking settings overrides, signature settings and outgoing webhooks
 
-.. image:: images/adjustments.png
+.. image:: ../sources/images/adjustments.png
 
 Modifications
 ^^^^^^^^^^^^^
 
 **Modifications** policy part defines individual actions that modify the policy based on AWAF learning or other actions like DAST resolutions
 
-.. image:: images/modifications.png
+.. image:: ../sources/images/modifications.png
 
 ChatOps
 -------
