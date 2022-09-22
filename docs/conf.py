@@ -5,10 +5,10 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "Workshop Volterra 10x"
+classname = "ForceFor Workshop"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/volterra-workshop-10x"
+github_repo = "https://github.com/f5devcentral/ForcesFor"
 
 #
 # END CONFIG
