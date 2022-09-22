@@ -15,7 +15,7 @@ The Lab Guide is not providing a step-by-step exercise as well cover the overall
 
 A high level diagram for "OWASP Top 10 2021 Declarative AWAF policy lifecycle in CI/CD Pipeline" environment can be found below along with the technologies that are being used on this lab.
 
-.. image:: ./sources/pictures/udf-lab.png
+.. image:: ../sources/pictures/udf-lab.png
    :align: center
 
 It covers:
