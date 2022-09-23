@@ -1,17 +1,13 @@
 Warsaw, Welcome to the ForceFor Lab Guide
 =========================================
 
-Welcome
--------
-
 .. warning:: Workshop under construction
 
 Welcome to the |classbold| - |year|
 
 |repoinfo|
 
-Welcome to our todays session.  This class will focus on how to integrate F5 AWAF into a CI/CD pipeline. 
-
+This Lab will focus on how to integrate F5 AWAF into a CI/CD pipeline. 
 The intention of the Lab Guide is to provide helpful content to run trough the Lab on your own pace.
 We are not providing a step-by-step exercise, you will find all relevant informations below. 
 
@@ -25,16 +21,16 @@ A high level diagram for "OWASP Top 10 2021 Declarative AWAF policy lifecycle in
 
 By the end of this lab you should be able to:
 
-1. Create an AWAF template
+1. Create an basic Security Policy  
 
-2. Understand how a deplyoment of an initial Security Policy Deployment can be automated with the help of GitLab
+2. Understand how a Security Policy can be automated deployed with the help of GitLab
 
-3. Use GitLab to create and push a basic policy based on a Rapid Deployment Policy Template with the help of GitLab
+3. Use GitLab to create and push a Security Policy - which is based on a Rapid Deployment Policy Template
 
 4. Enhance the Security Policy to have a OWASP Top 10 for 2021 compliant declarative WAF policy
 
 
-In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools,
+In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools:
 
 **Source Control Management (SCM)**
 (or version control) is the practice of tracking and managing changes to code. Source control management (SCM) systems provide a running history of code development and help to resolve conflicts when merging contributions from multiple sources.
@@ -75,8 +71,6 @@ Baseline
 
 .. image:: ../sources/images/baseline.png
 
-.. note:: In the future it will be possible to reference an externally hosted policy
-
 Adjustments
 ^^^^^^^^^^^
 
@@ -99,13 +93,6 @@ Webhooks are defined explicitly inside the AWAF policy and can be triggered by a
 
 **Webhooks are not used in this lab**
 
-Lab structure
--------------
-
-During this lab you will work with GitLab CE and utilize SCM and CI/CD pipelines to build, test and deploy 'OWASP Juice-Shop' App into a Docker host fronted by BIG-IP AWAF. 
-
-You use AWAF suggestions for trusted traffic to modify WAF policy and re-deploy the app all the way to Production.
-
 **Usefull content**
 
 * Getting Started with Declarative Policies: https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-declarative-security-policy/declarative-policy-getting-started.html
@@ -122,22 +109,7 @@ F5ers can access the blueprint directly from UDF without launching a course.
 .. note:: 	If a given topic is not highlighted currently on this page or something is incorrectly documented, please send a Teams Chat to Patrick Zoller.
          	We will do our best to prioritize the development of the content based on demand.
 
-It covers:
-
-* The 3 main WAAP use cases ``(Class 1)``
-  
-  * Application exposed on internet and protected by F5XC Global Network (RE only)
-  * Application not exposed on internet and only available in a private zone (VPC, VNET, internal VLAN ...) and protected by F5XC Global Network (RE + CE)
-  * Application not exposed on internet and protected by F5XS instance in a private zone (CE only)
-
-* How to apply and create a Positive Security policy with F5XC WAAP ``(Class 2)``
-* F5XC Shape Bot Protection ``(Class 2)``
-
-* A dedidacted workshop for Modern App Specialists ``(Class 3)``
-
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
    :glob:
-
-   class*/class*
