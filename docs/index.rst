@@ -114,4 +114,4 @@ F5ers can access the blueprint directly from UDF without launching a course.
    :caption: Contents:
    :glob:
 
-class*/class*
+class*/*
