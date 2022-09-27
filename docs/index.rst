@@ -1,8 +1,6 @@
 Warsaw, Welcome to the ForceFor Lab Guide
 =========================================
 
-.. warning:: Workshop under construction
-
 Welcome to the |classbold| - |year|
 
 |repoinfo|
