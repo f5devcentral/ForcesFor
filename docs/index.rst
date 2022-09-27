@@ -10,6 +10,7 @@ Welcome to the |classbold| - |year|
 This Lab will focus on how to integrate F5 AWAF into a CI/CD pipeline. 
 The intention of the Lab Guide is to provide helpful content to run trough the Lab on your own pace.
 We are not providing a step-by-step exercise, you will find all relevant informations below. 
+However, if you need additional informations please feel free to ask or have a look into Class1.
 
 A high level diagram for "OWASP Top 10 2021 Declarative AWAF policy lifecycle in CI/CD Pipeline" environment can be found below along with the technologies that are being used on this lab.
 
@@ -28,7 +29,6 @@ By the end of this lab you should be able to:
 3. Use GitLab to create and push a Security Policy - which is based on a Rapid Deployment Policy Template
 
 4. Enhance the Security Policy to have a OWASP Top 10 for 2021 compliant declarative WAF policy
-
 
 In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools:
 
@@ -109,7 +109,10 @@ F5ers can access the blueprint directly from UDF without launching a course.
 .. note:: 	If a given topic is not highlighted currently on this page or something is incorrectly documented, please send a Teams Chat to Patrick Zoller.
          	We will do our best to prioritize the development of the content based on demand.
 
+
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Contents:
    :glob:
+
+   class*/class*
