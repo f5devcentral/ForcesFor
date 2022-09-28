@@ -22,7 +22,7 @@ Key elements lab attendees will interact with are as follows:
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered:
    :caption: Labs:
    :glob:

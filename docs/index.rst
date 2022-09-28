@@ -49,11 +49,8 @@ Two main features that make AWAF to DevSecOps integration frictionless
 Declarative security policy YAML/JSON file can be used in place of a legacy XML policy (XML policy is still supported) and can be easily applied to an app following the same pipeline of the DevOps toolchain. Policy can be kept in SCM alongside with app source code, and be used by CI server in a traditional DevOps deployment model. Since JSON and YAML are trivially mapped (and JSON can be converted to YAML and vice versa), AWAF supports both file types.
 For the purpose of this lab our WAF policy is expressed as a JSON blob.
 
-AWAF policy overview
---------------------
-
-Policy structure
-~~~~~~~~~~~~~~~~
+AWAF policy overview and Policy structure
+-----------------------------------------
 
 AWAF policy consists of 3 parts:
 
@@ -103,7 +100,7 @@ To deploy a solution, you must be logged into UDF (https://udf.f5.com).
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Contents:
    :glob:
 
