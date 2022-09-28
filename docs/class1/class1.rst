@@ -1,41 +1,32 @@
-Class1 - Additional Informations on how to use the Lab
-######################################################
+Class 1 - Additional Information on how to use the Lab
+=======================================================
 
-The below should provide a highlevel help to navigate to the lab and the flow.
+The next page (Introduction) will cover the lab environment, access, and lab variables. 
 
-**Source Control Management (SCM) - In our Lab we use GitLab**
 
-On your Windows Jumphost there is a Bookmark available on Chrome to access GitLab 
+- Windows Jump host - The Windows Jump host has all required tools pre-installed and should be used while you are running through the lab.      
+- GitLab - Git repository, to push and run a pipeline of scripts to build a working demo setup on BIG-IP.                                                                                                                                 
+- BIG-IP - having LTM and AWF enabled to deliver the application services.
 
-.. image:: ./images/gitlab_no1.png
-   :align: center
+Lab Environment
+~~~~~~~~~~~~~~~
 
-Within here you find a Project called "owasp_top10_awaf_policy" which contain a single file called ".gitlab-ci.yml" and a folder called "WAF".
-
-The file ".gitlab-ci.yml" containes a GitLab CI configuration. This configuraion will trigger the Pipeline operations which are:
-
-* deploy
-* update
-* destroy
+The image below represents an overview of the lab environment.
+Key elements lab attendees will interact with are as follows:
   
-.. image:: ./images/gitlab_no2.png
-   :align: center
-
-The folder called "WAF" contains instructions on how a declarative Security Policy will be pushed to AWAF. The logic on how the files been used:
-
-* *yaml*
-* *.as3.json*
-* *policy.json*
-
-.. image:: ./images/gitlab_no3.png
-   :align: center
+ |intro001|                                                                                   
 
 
-You can run a Pipeline to "deploy" or "delete" a Security Policy on BIG-IP by running a Pipeline inside the CI/CD Menu of GitLab.
+.. |intro001| image:: ./images/lab_enviroment_no1.png
+   :width: 800px
 
-.. image:: ./images/gitlab_no4.png
-   :align: center
 
-* Variable remains Variable - no changes
-* "Input variable key" is "Mode"
-* "Input variable value" can be set to either "deploy", "update" or "destroy"
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Labs:
+   :glob:
+   
+   intro*
+   exercise*
+   close*
