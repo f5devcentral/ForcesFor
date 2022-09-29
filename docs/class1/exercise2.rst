@@ -37,7 +37,7 @@ This then will trigger two tasks:
 
 |intro0011| 
 
-If we Focus a bit more on the TASK [Deploy AS3 WebApp AWAF policy] you will see, that this task calls a ansible playbook called "playbook_waf.yaml".
+If we focus a bit more on the TASK [Deploy AS3 WebApp AWAF policy] you will see, that this task calls a ansible playbook called "playbook_waf.yaml".
 
 |intro0012|
 

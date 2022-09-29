@@ -5,11 +5,16 @@ Thank you for your participation in the ForceFor Lab.
 
 Appendix
 ========
-**Informations on Declarative Policies**:
+**Informations on Declarative Policies**
+
 **Getting Started with Declarative Policies**: https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-declarative-security-policy/declarative-policy-getting-started.html
+
 **Schema of F5 BIG-IP WAF Declarative Policy**: https://clouddocs.f5.com/products/waf-declarative-policy/
+
 **OWASP Top 10 - 2021 Dev Central Article - Part 1**: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295346
+
 **OWASP Top 10 - 2021 Dev Central Article - Part 2**: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295353
+
 **Policy Supervisor EA Access**: https://wafwizard.io
 
 +----------------------------------------------------------------------------------------------+
