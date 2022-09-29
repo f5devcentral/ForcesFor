@@ -5,7 +5,7 @@ The main objective of this exercise is to get GitLab hands on experience and dep
 
 #. Connect to the **Windows Jumphost** via RDP (Select an appropriate screen resolution for your screen) ensuring that you login with username/password as **user/user**
 #. Within your **Windows Jumphost** now start the Browser **Chrome**
-#. You will find a Bookmark called **Sign In GitLab**, please click on it
+#. You will find a Bookmark called **Sign In GitLab**, please click on it and sign with username/password as **root/F5twister$**
 
 |intro002| 
 
@@ -34,10 +34,10 @@ You can "deploy" or "delete" a declarative security policy on BIG-IP by running 
 The structure is:
 
 * Variable remains Variable - no changes
-* "Input variable key" is set to "Mode"
+* "Input variable key" is set to "MODE"
 * "Input variable value" can be set to either "deploy", "update" or "destroy"
 
-#. Run your first Pipeline by setting the "Input variable key" to "Mode" and the "Input variable value" to "deploy".
+#. Run your first Pipeline by setting the "Input variable key" to "MODE" and the "Input variable value" to "deploy".
 
 |intro006|
 
