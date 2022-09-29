@@ -5,7 +5,7 @@ The main objective of this exercise is to get GitLab hands on experience and dep
 
 #. Connect to the **Windows Jumphost** via RDP (Select an appropriate screen resolution for your screen) ensuring that you login with username/password as **user/user**
 #. Within your **Windows Jumphost** now start the Browser **Chrome**
-#. You will find a Bookmark called **Sign In GitLab**, please click on it and sign with username/password as **root/F5twister$**
+#. You will find a Bookmark called **Sign In GitLab**, please click on it and pick up **root** as user with saved credentials in Chrome web browser 
 
 |intro002| 
 

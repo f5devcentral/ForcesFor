@@ -8,14 +8,19 @@ At the beginning we been talking about two Dev Central Article covering on how t
 
 Goal of the exercise now is to create, modify and understand the concept of a declarative security policy in a way which narrow down to be OWASP Top 10 - 2021 compliant.
 
-This article describes an example of a minimal declarative WAF policy that is OWASP Top 10 compliant.
+The DevCentral article " OWASP Top 10 - 2021 Dev Central Article - Part 2" describes an example of a minimal declarative WAF policy that is OWASP Top 10 compliant.
 Note that there are policy elements that are customized for the application being protected, in this case a demo application named Arcadia Finance, so they will need to be adapted for each application.
+You achieve the state of being OWASP TOP 10 compliant, without touching BIGIP GUI.
 
-The policy was configured following the pattern described in K45215395: Securing against the OWASP Top 10 for 2021 guide and its conformance with OWASP Top 10 is being verified by
-consulting the OWASP Compliance Dashboard bundled with F5's Advanced WAF.
+.. note:: Change your policy accordingly the steps in article, use GitLab pipelines and by this make the policy more OWASP 2021 Top10 compliant. 
+
+**First of all deploy a security policy by running the CICD pipeline.**
+
+As you can see from the OWASP Compliance Dashboard screenshot in BIG-IP, this policy is far from being OWASP-compliant, but we will use it as a starting point to build a fully compliant configuration.
+With the help of the "OWASP Top 10 - 2021 Dev Central Article - Part 2" t we will go through each vulnerability class and show an example of declarative WAF policy configuration 
+that would mitigate that respective vulnerability.
 
 |intro011|
-
 
 As usual, there are multiple ways to achieve a goal:
 
@@ -39,8 +44,10 @@ As usual, there are multiple ways to achieve a goal:
 
 |intro016|
 
-If you are running out of time, within GitLab we prepared a "owasp_2021" security policy which can be pushed to BIG-IP by changing the AS3 file to point to that specific file.
-Please change the URL pointing to the external source of the security policy within "as3_waf.json" from "url" ending: "rdp_policy.json" to url": "owasp_2021.json".
+.. note:: In this lab you will made a few copy and paste operation from DevCentral article to mead your AWAF policy more compliant with OWASP 2021 Top10. You may experience some problems with this copy and paste operations if you will do the on Jumphost only. Therefore, you can open Devcentral article on your local machine and from here copy and paste into Jumphost Gitlab.
+
+
+.. warning:: If you are running out of time, the DevCentral article " OWASP Top 10 - 2021 Dev Central Article - Part 2" has a hint included to achieve a "OWASP TOP 10 compliant" status.
 
  |intro017|
 
