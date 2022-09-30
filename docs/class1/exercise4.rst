@@ -46,52 +46,55 @@ After your run successfully the CICD Pipeline, please check the outcome on BIG-I
 To achive Category A3 compliance, you need to modify some code in "Adjustments" section of the "rdp_policy_non_owasp.json" file.
 Specifically in the section "evasions".
 
-        .. code-block:: js
-             :caption: Adjustments.json
-                "evasions": [
-                    {
-                        "description": "Bad unescape",
-                        "enabled":  false,
-                        "learn": true
-                    },
-                    {
-                        "description": "Apache whitespace",
-                        "enabled":  false,
-                        "learn": true
-                    },
-                    {
-                        "description": "Bare byte decoding",
-                        "enabled":  false,
-                        "learn": true
-                    },
-                    {
-                        "description": "IIS Unicode codepoints",
-                        "enabled":  false,
-                        "learn": true
-                    },
-                    {
-                        "description": "IIS backslashes",
-                        "enabled": false,
-                        "learn": true
-                    },
-                    {
-                        "description": "%u decoding",
-                        "enabled": false,
-                        "learn": true
-                    },
-                    {
-                        "description": "Multiple decoding",
-                        "enabled":  false,
-                        "learn": true,
-                        "maxDecodingPasses": 3
-                    },
-                    {
-                        "description": "Directory traversals",
-                        "enabled": false,
-                        "learn": true
-                    }
-                    ]
-                },
+
+.. code-block:: json
+    :caption: Adjustments
+
+    "evasions": [
+        {
+        "description": "Bad unescape",
+        "enabled":  false,
+        "learn": true
+        },
+        {
+        "description": "Apache whitespace",
+        "enabled":  false,
+        "learn": true
+        },
+        {
+        "description": "Bare byte decoding",
+        "enabled":  false,
+        "learn": true
+        },
+        {
+        "description": "IIS Unicode codepoints",
+        "enabled":  false,
+        "learn": true
+        },
+        {
+        "description": "IIS backslashes",
+        "enabled": false,
+        "learn": true
+        },
+        {
+        "description": "%u decoding",
+        "enabled": false,
+        "learn": true
+        },
+        {
+        "description": "Multiple decoding",
+        "enabled":  false,
+        "learn": true,
+        "maxDecodingPasses": 3
+        },
+        {
+        "description": "Directory traversals",
+        "enabled": false,
+        "learn": true
+        }
+    ]
+
+ 
 
 After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
@@ -100,73 +103,75 @@ After your run successfully the CICD Pipeline, please check the outcome on BIG-I
 To achive Category A1 compliance, you need to modify some code in "Adjustments" section of the "rdp_policy_non_owasp.json" file.
 Specifically in the section "violations".
 
-        .. code-block:: js
-             :caption: Adjustments.json
-                        "violations": [
-                    {
-                    "alarm": true,
-                    "block": true,
-                    "description": "ASM Cookie Hijacking",
-                    "learn": false,
-                    "name": "VIOL_ASM_COOKIE_HIJACKING"
-                    },
-                    {
-                    "alarm": true,
-                    "block": true,
-                    "description": "Access from disallowed User/Session/IP/Device ID",
-                    "name": "VIOL_SESSION_AWARENESS"
-                    },
-                    {
-                    "alarm": true,
-                    "block": true,
-                    "description": "Modified ASM cookie",
-                    "learn": true,
-                    "name": "VIOL_ASM_COOKIE_MODIFIED"
-                    },
-                    {
-                    "name": "VIOL_LOGIN_URL_BYPASSED",
-                    "alarm": true,
-                    "block": false,
-                    "learn": false
-                    },
-                    {
-                    "alarm": true,
-                    "block": true,
-                    "description": "XML data does not comply with format settings",
-                    "learn": true,
-                    "name": "VIOL_XML_FORMAT"
-                    },
-                    {
-                    "name": "VIOL_FILETYPE",
-                    "alarm": true,
-                    "block": false,
-                    "learn": true
-                    },
-                    {
-                    "name": "VIOL_URL",
-                    "alarm": true,
-                    "block": false,
-                    "learn": true
-                    },
-                    {
-                    "name": "VIOL_URL_METACHAR",
-                    "alarm": true,
-                    "block": false,
-                    "learn": true
-                    },
-                    {
-                    "name": "VIOL_PARAMETER_VALUE_METACHAR",
-                    "alarm": true,
-                    "block": false,
-                    "learn": true
-                    },
-                    {
-                    "name": "VIOL_PARAMETER_NAME_METACHAR",
-                    "alarm": true,
-                    "block": false,
-                    "learn": true
-                    }
-                ],
+.. code-block:: json
+    :caption: Adjustments
+
+    "violations": [
+         {
+           "alarm": true,
+           "block": true,
+           "description": "ASM Cookie Hijacking",
+           "learn": false,
+           "name": "VIOL_ASM_COOKIE_HIJACKING"
+         },
+         {
+           "alarm": true,
+           "block": true,
+           "description": "Access from disallowed User/Session/IP/Device ID",
+           "name": "VIOL_SESSION_AWARENESS"
+         },
+         {
+           "alarm": true,
+           "block": true,
+           "description": "Modified ASM cookie",
+           "learn": true,
+           "name": "VIOL_ASM_COOKIE_MODIFIED"
+         },
+         {
+           "name": "VIOL_LOGIN_URL_BYPASSED",
+           "alarm": true,
+           "block": false,
+           "learn": false
+         },
+         {
+           "alarm": true,
+           "block": true,
+           "description": "XML data does not comply with format settings",
+           "learn": true,
+           "name": "VIOL_XML_FORMAT"
+         },
+         {
+           "name": "VIOL_FILETYPE",
+           "alarm": true,
+           "block": false,
+           "learn": true
+         },
+         {
+           "name": "VIOL_URL",
+           "alarm": true,
+           "block": false,
+           "learn": true
+         },
+         {
+           "name": "VIOL_URL_METACHAR",
+           "alarm": true,
+           "block": false,
+           "learn": true
+         },
+         {
+           "name": "VIOL_PARAMETER_VALUE_METACHAR",
+           "alarm": true,
+           "block": false,
+           "learn": true
+         },
+         {
+           "name": "VIOL_PARAMETER_NAME_METACHAR",
+           "alarm": true,
+           "block": false,
+           "learn": true
+         }
+     ]
+
 
 After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
