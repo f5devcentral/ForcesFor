@@ -44,7 +44,7 @@ As usual, there are multiple ways to achieve a goal:
 
 |intro016|
 
-.. note:: In this lab you will made a few copy and paste operation from DevCentral article to mead your AWAF policy more compliant with OWASP 2021 Top10. You may experience some problems with this copy and paste operations if you will do the on Jumphost only. Therefore, you can open Devcentral article on your local machine and from here copy and paste into Jumphost Gitlab.
+.. note:: In this lab you will made a few copy and paste operation from DevCentral article to mead your AWAF policy more compliant with OWASP 2021 Top10. You may experience some problems with this copy and paste operations if you will do the on Jumphost only. Therefore, you can open DevCentral article on your local machine and from here copy and paste into Jumphost Gitlab.
 
 
 .. warning:: If you are running out of time, the DevCentral article " OWASP Top 10 - 2021 Dev Central Article - Part 2" has a hint included to achieve a "OWASP TOP 10 compliant" status.

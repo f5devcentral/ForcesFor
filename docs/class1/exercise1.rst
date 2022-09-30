@@ -41,11 +41,9 @@ The structure is:
 
 |intro006|
 
-Within the "Pipelines" menu you have the ability to track the current process of the deployment as well verify whether the pipeline 'passed' or 'failed'.
+Within the "Pipelines" menu you can track the current process of the deployment as well verify whether the pipeline 'passed' or 'failed'.
 
 |intro007|
-
-
 
 .. |intro002| image:: ./images/gitlab_no1.png
    :width: 800px
@@ -59,4 +57,3 @@ Within the "Pipelines" menu you have the ability to track the current process of
    :width: 800px
 .. |intro007| image:: ./images/gitlab_no6.png
    :width: 800px
-
