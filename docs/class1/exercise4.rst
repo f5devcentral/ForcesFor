@@ -15,25 +15,27 @@ The goal of this exercise is to make the secuirty policy now compliant with:
 To achive Category A10 compliance, you need to modify some code in "Baseline" section of the "rdp_policy_non_owasp.json" file.
 
 
-.. code-block:: js
-    :caption: Baseline.json
-       {
-        "policy": {
-        "name": "Complete_OWASP_Top_Ten",
-        "description": "A basic, OWASP Top 10 protection items v1.0",
-        "template": {
-        "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-        },
-        "enforcementMode":"transparent",
-        "protocolIndependent": true,
-        "caseInsensitive": true,
-        "general": {
-        "trustXff": true
-        },
-        "signature-settings":{
-        "signatureStaging": true,
-        "minimumAccuracyForAutoAddedSignatures": "high"
-        },
+.. code-block:: json
+    :caption: Baseline
+
+  "policy": {
+    "name": "Complete_OWASP_Top_Ten",
+    "description": "A basic, OWASP Top 10 protection items v1.0",
+    "template": {
+      "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
+    },
+    "enforcementMode": "transparent",
+    "protocolIndependent": true,
+    "caseInsensitive": true,
+    "general": {
+      "trustXff": true
+    },
+    "signature-settings": {
+      "signatureStaging": true,
+      "minimumAccuracyForAutoAddedSignatures": "high"
+    }
+  }
+
 
 
 After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
