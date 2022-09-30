@@ -26,9 +26,8 @@ Do you remember the file name?
 
 New content of the file:
 
-.. code-block:: js
-   :caption: log_default.json
-
+.. code-block:: bash
+  
 {
   "policy": {
     "name": "OWASP_2021",
