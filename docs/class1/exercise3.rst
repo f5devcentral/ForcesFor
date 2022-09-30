@@ -26,17 +26,17 @@ Do you remember the file name?
 
 New content of the file:
 
-        .. code-block:: js
+      .. code-block:: js
 
-			{
-			"policy": {
-			"name": "OWASP_2021",
-			"description": "Rapid Deployment Policy",
-			"template": {
-			"name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-					}
+		{
+		"policy": {
+		"name": "OWASP_2021",
+		"description": "Rapid Deployment Policy",
+		"template": {
+		"name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
 				}
 			}
+		}
 
       
 As you can see from the below OWASP Compliance Dashboard screenshot in BIG-IP, this policy is far away from being OWASP compliant.
