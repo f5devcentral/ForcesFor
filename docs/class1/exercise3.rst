@@ -3,8 +3,7 @@ Exercise 3: Deploy a declarative security policy which will be a more [not fully
 
 At the beginning of the Lab we been talking about three articles to achive a more [not fully] OWASP Top 10 - 2021 combliant policy.
 
-**K45215395: Guide introduction and contents - Secure against the OWASP Top 10 for 2021 **
-* https://support.f5.com/csp/article/K45215395
+* K45215395: Guide introduction and contents - Secure against the OWASP Top 10 for 2021: https://support.f5.com/csp/article/K45215395
 
 **Community Support on OWASP Top 10 - 2021 inside Dev Central**
 
@@ -20,34 +19,18 @@ You will create, modify and understand the concept of a declarative security pol
 
 .. note:: Change your policy accordingly the steps in article, use GitLab pipelines and by this make the policy more OWASP 2021 Top10 compliant. 
 
-**Step 1: Deploy a security policy by running the CICD pipeline. Change the content of file wich contains the security policy**
+**Step 1: Deploy a security policy by running the CICD pipeline. For the purpose of Excercise 4, please use the config named "rdp_policy_non_owasp.json"**
 
-Do you remember the file name?
-
-New content of the file:
-
-      .. code-block:: js
-
-		{
-		"policy": {
-		"name": "OWASP_2021",
-		"description": "Rapid Deployment Policy",
-		"template": {
-		"name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-		  }
-		 }
-		}
-
-      
+.. note:: On Excercise 2 you learned the structure GitLab and in which order the different instructions been called. Find the name of the AS3 decalaration file and where the policy.json been referenced.
+   
 As you can see from the below OWASP Compliance Dashboard screenshot in BIG-IP, this policy is far away from being OWASP compliant.
 
 |intro011|
 
-Inside *Exercise 4* you will find four examples to enrich the security policy. These example will change the status of the dashboard for categrories:
+Inside *Exercise 4* you will find three examples to enrich the security policy. These example will change the status of the dashboard for categrories:
 
 -  A1 Broken Access Control
 -  A3 Injection
--  A7 Identification and Authentication Failures
 -  A10 Server-Side Request Forgery (SSRF)
 
 As usual, there are multiple ways to achieve a goal:
@@ -61,8 +44,8 @@ As usual, there are multiple ways to achieve a goal:
 |intro015| 
 
 [2] You can use an external tool called "Policy Supervisor" to create or upload a security policy. Within the tool you got the options to configure different security controls.
-     FYI: As part of the overall strategy of F5, the tool will allow you to convert a AWAF or NAP security policy into a XC WAAP policy.
-     Policy Supervisor EA Access:   https://wafwizard.io
+FYI: As part of the overall strategy of F5, the tool will allow you to convert a AWAF or NAP security policy into a XC WAAP policy.
+Policy Supervisor EA Access:   https://wafwizard.io
 
 |intro016|
 

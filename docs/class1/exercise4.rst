@@ -1,111 +1,177 @@
 Exercise 4: Manual enhancement to modify the security policy by using a declarative approach
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As mentioned in Excercise 3 in this chapter we will prvide you some hint to achive a more OWASP TOP 10 Compliant Security Policy.
+As mentioned in *Excercise 3* in this chapter we will provide you some hints to achive a more OWASP TOP 10 Compliant Security Policy.
+In *Excercise 3* you successfully deployed the non-OWASP Top 10 policy called "rdp_policy_non_owasp.json".
 
-Focus is on:
+The goal of this exercise is to make the secuirty policy now compliant with:
 
--  A1 Broken Access Control
--  A3 Injection
--  A7 Identification and Authentication Failures
 -  A10 Server-Side Request Forgery (SSRF)
+-  A3 Injection
+-  A1 Broken Access Control
 
-**A1 Broken Access Control**
+**A10 Server-Side Request Forgery (SSRF)**
+
+To achive Category A10 compliance, you need to modify some code in "Baseline" section of the "rdp_policy_non_owasp.json" file.
+
+        .. code-block:: js
+             :caption: Baseline.json
+            {
+            "policy": {
+                "name": "Complete_OWASP_Top_Ten",
+                "description": "A basic, OWASP Top 10 protection items v1.0",
+                "template": {
+                "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
+                },
+                "enforcementMode":"transparent",
+                "protocolIndependent": true,
+                "caseInsensitive": true,
+                "general": {
+                "trustXff": true
+                },
+                "signature-settings":{
+                    "signatureStaging": true,
+                    "minimumAccuracyForAutoAddedSignatures": "high"
+                },
 
 
-
+After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
 
 **A3 Injection**
 
+To achive Category A3 compliance, you need to modify some code in "Adjustments" section of the "rdp_policy_non_owasp.json" file.
+Specifically in the section "evasions".
 
-**A7 Identification and Authentication Failures**
+        .. code-block:: js
+             :caption: Adjustments.json
+                "evasions": [
+                    {
+                        "description": "Bad unescape",
+                        "enabled":  false,
+                        "learn": true
+                    },
+                    {
+                        "description": "Apache whitespace",
+                        "enabled":  false,
+                        "learn": true
+                    },
+                    {
+                        "description": "Bare byte decoding",
+                        "enabled":  false,
+                        "learn": true
+                    },
+                    {
+                        "description": "IIS Unicode codepoints",
+                        "enabled":  false,
+                        "learn": true
+                    },
+                    {
+                        "description": "IIS backslashes",
+                        "enabled": false,
+                        "learn": true
+                    },
+                    {
+                        "description": "%u decoding",
+                        "enabled": false,
+                        "learn": true
+                    },
+                    {
+                        "description": "Multiple decoding",
+                        "enabled":  false,
+                        "learn": true,
+                        "maxDecodingPasses": 3
+                    },
+                    {
+                        "description": "Directory traversals",
+                        "enabled": false,
+                        "learn": true
+                    }
+                    ]
+                },
 
+After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
-**A10 Server-Side Request Forgery (SSRF)**
+**A1 Broken Access Control**
 
+To achive Category A1 compliance, you need to modify some code in "Adjustments" section of the "rdp_policy_non_owasp.json" file.
+Specifically in the section "violations".
 
+        .. code-block:: js
+             :caption: Adjustments.json
+                        "violations": [
+                    {
+                    "alarm": true,
+                    "block": true,
+                    "description": "ASM Cookie Hijacking",
+                    "learn": false,
+                    "name": "VIOL_ASM_COOKIE_HIJACKING"
+                    },
+                    {
+                    "alarm": true,
+                    "block": true,
+                    "description": "Access from disallowed User/Session/IP/Device ID",
+                    "name": "VIOL_SESSION_AWARENESS"
+                    },
+                    {
+                    "alarm": true,
+                    "block": true,
+                    "description": "Modified ASM cookie",
+                    "learn": true,
+                    "name": "VIOL_ASM_COOKIE_MODIFIED"
+                    },
+                    {
+                    "name": "VIOL_LOGIN_URL_BYPASSED",
+                    "alarm": true,
+                    "block": false,
+                    "learn": false
+                    },
+                    {
+                    "alarm": true,
+                    "block": true,
+                    "description": "XML data does not comply with format settings",
+                    "learn": true,
+                    "name": "VIOL_XML_FORMAT"
+                    },
+                    {
+                    "name": "VIOL_FILETYPE",
+                    "alarm": true,
+                    "block": false,
+                    "learn": true
+                    },
+                    {
+                    "name": "VIOL_URL",
+                    "alarm": true,
+                    "block": false,
+                    "learn": true
+                    },
+                    {
+                    "name": "VIOL_URL_METACHAR",
+                    "alarm": true,
+                    "block": false,
+                    "learn": true
+                    },
+                    {
+                    "name": "VIOL_PARAMETER_VALUE_METACHAR",
+                    "alarm": true,
+                    "block": false,
+                    "learn": true
+                    },
+                    {
+                    "name": "VIOL_PARAMETER_NAME_METACHAR",
+                    "alarm": true,
+                    "block": false,
+                    "learn": true
+                    }
+                ],
 
+After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
+When you went trough teh above steps successfully your BIG-IP OWASP Compliance dashboard will look like the following:
 
+|intro020|
 
+In case you are running our of time, please change the pipeline to the json file called "owasp_2021.json".
 
-
-
-
-
-At the beginning we been talking about two Dev Central Article covering on how to build a security policy which comply with OWASP Top 10 - 2021.
-
-* OWASP Top 10 - 2021 Dev Central Article - Part 1: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295346
-* OWASP Top 10 - 2021 Dev Central Article - Part 2: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295353
-
-Goal of the exercise now is to create, modify and understand the concept of a declarative security policy in a way which narrow down to be OWASP Top 10 - 2021 compliant.
-
-The DevCentral article " OWASP Top 10 - 2021 Dev Central Article - Part 2" describes an example of a minimal declarative WAF policy that is OWASP Top 10 compliant.
-Note that there are policy elements that are customized for the application being protected, in this case a demo application named Arcadia Finance, so they will need to be adapted for each application.
-You achieve the state of being OWASP TOP 10 compliant, without touching BIGIP GUI.
-
-.. note:: Change your policy accordingly the steps in article, use GitLab pipelines and by this make the policy more OWASP 2021 Top10 compliant. 
-
-**First of all deploy a security policy by running the CICD pipeline.**
-
-As you can see from the OWASP Compliance Dashboard screenshot in BIG-IP, this policy is far from being OWASP-compliant, but we will use it as a starting point to build a fully compliant configuration.
-With the help of the "OWASP Top 10 - 2021 Dev Central Article - Part 2" t we will go through each vulnerability class and show an example of declarative WAF policy configuration 
-that would mitigate that respective vulnerability.
-
-|intro011|
-
-As usual, there are multiple ways to achieve a goal:
-
-[1] You can follow the "OWASP Top 10 - 2021 Dev Central Article - Part 2" which provide a step-by-step explanation.
-
-|intro012|
-
-
-[2] You can use the BIG-IP UI, to create a security policy, download the policy as JSON and enhance the pipeline on GitLab with the Code changes.
-
-|intro013|
-
-|intro014|
-
-|intro015| 
-
-
-[3] You can use an external tool called "Policy Supervisor" to create or upload a security policy. Within the tool you got the options to configure different security controls.
-     FYI: As part of the overall strategy of F5, the tool will allow you to convert a AWAF or NAP security policy into a XC WAAP policy.
-     Policy Supervisor EA Access:   https://wafwizard.io
-
-|intro016|
-
-.. note:: In this lab you will made a few copy and paste operation from DevCentral article to mead your AWAF policy more compliant with OWASP 2021 Top10. You may experience some problems with this copy and paste operations if you will do the on Jumphost only. Therefore, you can open DevCentral article on your local machine and from here copy and paste into Jumphost Gitlab.
-
-
-.. warning:: If you are running out of time, the DevCentral article " OWASP Top 10 - 2021 Dev Central Article - Part 2" has a hint included to achieve a "OWASP TOP 10 compliant" status.
-
- |intro017|
-
- |intro018|
-
-.. |intro011| image:: ./images/big-ipno4.png
-   :width: 800px
-
-.. |intro012| image:: ./images/devcentral_no1.png
-   :width: 800px
-
-.. |intro013| image:: ./images/big-ipno11.png
-   :width: 800px
-
-.. |intro014| image:: ./images/big-ipno12.png
-   :width: 800px
-
-.. |intro015| image:: ./images/declarative_sec_policy_no1.png
-   :width: 800px
-
-.. |intro016| image:: ./images/policy_supervisor_no1.png
-   :width: 800px
-
-.. |intro017| image:: ./images/gitlab_no8.png
-   :width: 800px
-
-.. |intro018| image:: ./images/gitlab_no9.png
+.. |intro020| image:: ./images/big-ipno13.png
    :width: 800px
