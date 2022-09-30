@@ -14,6 +14,7 @@ The goal of this exercise is to make the secuirty policy now compliant with:
 
 To achive Category A10 compliance, you need to modify some code in "Baseline" section of the "rdp_policy_non_owasp.json" file.
 
+
 .. code-block:: js
     :caption: Baseline.json
        {
