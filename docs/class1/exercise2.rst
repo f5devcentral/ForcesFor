@@ -2,9 +2,13 @@ Exercise 2: Access the Lab Environment - BIG-IP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next is to verify that the security policy has been configured deployed to BIG-IP.
+
 * To do so, open the BIG-IP TMUI by selecting the bookmark on Chrome and login with username/password **admin/admin**
+  
 * The previous deployed pipeline created a new partition called "Web-Prod". Beside the security policy a Virtual Server, Pool and Node have been deployed inside this new partition
+  
 * To check the security policy, select the new partition called "Web-Prod" and navigate to Security -> Application Security -> Security Policies -> Policies List
+  
 * You will see a new security policy named "Arcadia_WAF_policy"
 
 |intro008|
