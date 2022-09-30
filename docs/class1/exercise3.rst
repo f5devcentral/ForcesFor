@@ -27,7 +27,6 @@ Do you remember the file name?
 New content of the file:
 
         .. code-block:: js
-             :caption: Default_Policy
 
 			{
 			"policy": {
