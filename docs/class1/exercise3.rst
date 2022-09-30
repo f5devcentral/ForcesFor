@@ -26,18 +26,21 @@ Do you remember the file name?
 
 New content of the file:
 
-.. code-block:: bash
-  
-{
-  "policy": {
-    "name": "OWASP_2022",
-    "description": "Rapid Deployment Policy",
-    "template": {
-      "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-    }
-  }
-}
+        .. code-block:: js
+             :caption: log_default.json
 
+             {
+             "filter": {
+                "request_type": "all"
+                   },
+             "content": {
+                "format": "default",
+                "max_request_size": "any",
+                "max_message_size": "5k"
+                   }
+             }
+
+             
 As you can see from the below OWASP Compliance Dashboard screenshot in BIG-IP, this policy is far away from being OWASP compliant.
 
 |intro011|
