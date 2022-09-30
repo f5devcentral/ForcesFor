@@ -18,23 +18,23 @@ To achive Category A10 compliance, you need to modify some code in "Baseline" se
 .. code-block:: json
     :caption: Baseline
 
-  "policy": {
-    "name": "Complete_OWASP_Top_Ten",
-    "description": "A basic, OWASP Top 10 protection items v1.0",
-    "template": {
-      "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-    },
-    "enforcementMode": "transparent",
-    "protocolIndependent": true,
-    "caseInsensitive": true,
-    "general": {
-      "trustXff": true
-    },
-    "signature-settings": {
-      "signatureStaging": true,
-      "minimumAccuracyForAutoAddedSignatures": "high"
+    "policy": {
+        "name": "Complete_OWASP_Top_Ten",
+        "description": "A basic, OWASP Top 10 protection items v1.0",
+        "template": {
+        "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
+        },
+        "enforcementMode": "transparent",
+        "protocolIndependent": true,
+        "caseInsensitive": true,
+        "general": {
+        "trustXff": true
+        },
+        "signature-settings": {
+        "signatureStaging": true,
+        "minimumAccuracyForAutoAddedSignatures": "high"
+        }
     }
-  }
 
 
 
