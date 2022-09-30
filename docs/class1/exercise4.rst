@@ -3,7 +3,6 @@ Exercise 4: Manual enhancement to modify the security policy by using a declarat
 
 As mentioned in Excercise 3 in this chapter we will prvide you some hint to achive a more OWASP TOP 10 Compliant Security Policy.
 
-
 Focus is on:
 
 -  A1 Broken Access Control
