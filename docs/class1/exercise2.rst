@@ -13,7 +13,7 @@ Next is to verify that the security policy has been configured deployed to BIG-I
 
 |intro009|
 
-* Within next Exercise - Exercise Number 3 - we want to deploy a security policy which will be compliant for OWASP Top 10 2021 compliant. For that, please delete the current deployment on BIG-IP with help of GitLab.
+* Within next Exercise - Exercise Number 3 - we want to deploy a security policy which will be more [not fully] OWASP Top 10 2021 compliant. For that, please delete the current deployment on BIG-IP with help of GitLab.
 * Remember the different Modes available when you issue a Pipeline
 
 |intro005|

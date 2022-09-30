@@ -25,7 +25,7 @@ By the end of this lab, you should be able to:
 
 3. Use GitLab to create and push a declarative security policy - which is based on a Rapid Deployment Policy Template
 
-4. Enhance the Security Policy to have a OWASP Top 10 for 2021 compliant declarative security policy
+4. Enhance the Security Policy to have a more [not fully] OWASP Top 10 for 2021 compliant declarative security policy
 
 In order to successfully complete the lab, you should have a basic understanding of some of the DevOps methodologies and tools:
 
@@ -91,10 +91,14 @@ Webhooks are defined explicitly inside the AWAF policy and can be triggered by a
 
 * Getting Started with Declarative Policies: https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-declarative-security-policy/declarative-policy-getting-started.html
 * Schema of F5 BIG-IP WAF Declarative Policy: https://clouddocs.f5.com/products/waf-declarative-policy/
+* K45215395: Guide introduction and contents - Secure against the OWASP Top 10 for 2021: https://support.f5.com/csp/article/K45215395
+
+**Community Support on OWASP Top 10 - 2021 inside Dev Central**
+
 * OWASP Top 10 - 2021 Dev Central Article - Part 1: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295346
 * OWASP Top 10 - 2021 Dev Central Article - Part 2: https://community.f5.com/t5/technical-articles/how-to-deploy-a-basic-owasp-top-10-for-2021-compliant/ta-p/295353
+  
 * Policy Supervisor EA Access:   https://wafwizard.io
-
 
 To deploy a solution, you must be logged into UDF (https://udf.f5.com).
 
