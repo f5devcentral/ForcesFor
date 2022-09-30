@@ -30,7 +30,7 @@ New content of the file:
   
 {
   "policy": {
-    "name": "OWASP_2021",
+    "name": "OWASP_2022",
     "description": "Rapid Deployment Policy",
     "template": {
       "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
