@@ -34,8 +34,8 @@ New content of the file:
 		"description": "Rapid Deployment Policy",
 		"template": {
 		"name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
-				}
-			}
+		  }
+		 }
 		}
 
       
