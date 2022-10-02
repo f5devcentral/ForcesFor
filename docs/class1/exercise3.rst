@@ -13,11 +13,9 @@ At the beginning of the Lab we been talking about three articles to achive a mor
 The Article "OWASP Top 10 - 2021 Dev Central Article - Part 2" provide some - but not all - examples to achive a OWASP Top 10 - 2021 compliant policy.
 It is offering hints rather a full solution.
 
-Within the following Lab we will focus on 4 out of the 10 OWASP Top 10 attack catergories. For those we will provide you the declaration to enahance the security policy.
+Within the following Lab we will focus on 3 out of the 10 OWASP Top 10 attack catergories. For those we will provide you the declaration to enahance the security policy.
 
 You will create, modify and understand the concept of a declarative security policy in a way which narrow down to be more [not fully] OWASP Top 10 - 2021 compliant.
-
-.. note:: Change your policy accordingly the steps in article, use GitLab pipelines and by this make the policy more OWASP 2021 Top10 compliant. 
 
 **Step 1: Deploy a security policy by running the CICD pipeline. For the purpose of Excercise 4, please use the config named "rdp_policy_non_owasp.json"**
 

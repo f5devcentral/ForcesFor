@@ -17,17 +17,6 @@ Next is to verify that the security policy has been configured deployed to BIG-I
 
 |intro009|
 
-* Within next Exercise - Exercise Number 3 - we want to deploy a security policy which will be more [not fully] OWASP Top 10 2021 compliant. For that, please delete the current deployment on BIG-IP with help of GitLab.
-* Remember the different Modes available when you issue a Pipeline
-
-|intro005|
-
-* You can verify that the deployment has been deleted proper by either check it within the "run pipeline" in GitLab or whether the partition called "Web-Prod" has been deleted.
-
-|intro007|
-
-|intro010|
-
 .. note:: Within the following you will find an overview on which files will be executed by CI/CD pipeline to apply an AWAF security policy.
 
 * It all starts with running the pipeline by setting the "MODE" variable to "deploy"
@@ -58,6 +47,16 @@ Also, the file calls external source file rdp_policy.json, where actually there 
 |intro0015| 
 
 You will find AWAF policy declaration which will be deployed on BIGIP in rdp_policy.json file.
+
+.. note:: Please delete the current deployment on BIG-IP with help of GitLab. Remember the different Modes available when you issue a Pipeline
+
+|intro005|
+
+* You can verify that the deployment has been deleted proper by either check it within the "run pipeline" in GitLab or whether the partition called "Web-Prod" has been deleted.
+
+|intro007|
+
+|intro010|
 
 |intro0016|
 

@@ -14,7 +14,6 @@ The goal of this exercise is to make the secuirty policy now compliant with:
 
 To achive Category A10 compliance, you need to modify some code in "Baseline" section of the "rdp_policy_non_owasp.json" file.
 
-
 .. code-block:: json
     :caption: Baseline
 
@@ -35,10 +34,6 @@ To achive Category A10 compliance, you need to modify some code in "Baseline" se
         "minimumAccuracyForAutoAddedSignatures": "high"
         }
     }
-
-
-
-After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
 
 **A3 Injection**
@@ -93,10 +88,6 @@ Specifically in the section "evasions".
         "learn": true
         }
     ]
-
- 
-
-After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
 **A1 Broken Access Control**
 
@@ -173,13 +164,15 @@ Specifically in the section "violations".
      ]
 
 
-After your run successfully the CICD Pipeline, please check the outcome on BIG-IP OWASP Compliance dashboard.
 
 When you went trough teh above steps successfully your BIG-IP OWASP Compliance dashboard will look like the following:
 
 |intro020|
 
 In case you are running our of time, please change the pipeline to the json file called "owasp_2021.json".
+
+We hope you learned the logic how declarative schema of AWAF policy is constructed and how to deploy policy changes with CICD GitLab pipelines. 
+Now, based on information in Exercises 1-4, you can continue and modify your AWAF policy to be FULLY OWASP complaint!.'
 
 .. |intro020| image:: ./images/big-ipno13.png
    :width: 800px
