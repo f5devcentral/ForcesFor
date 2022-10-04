@@ -164,8 +164,7 @@ Specifically in the section "violations".
      ]
 
 
-
-When you went trough teh above steps successfully your BIG-IP OWASP Compliance dashboard will look like the following:
+If you completed the above steps, the BIG-IP OWASP Compliance dashboard looks like:
 
 |intro020|
 
